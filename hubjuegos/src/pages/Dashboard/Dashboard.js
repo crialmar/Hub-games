@@ -1,5 +1,5 @@
 //Dashboard.js ------> src/componets/Dashboard/Dashboard.js
-import { initControler } from "../../utils";
+import { getInfo, initControler } from "../../utils";
 import "./Dashboard.css";
 
 const template = () => `
@@ -55,4 +55,6 @@ export const printTemplateDashboard = () => {
 
   /** metemos los escuchadores de la pagina */
   addEventListeners();
+
+  getInfo();
 };
