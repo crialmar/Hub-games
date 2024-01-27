@@ -21,7 +21,7 @@ export const initControler = (pagesRender) => {
             printTemplateDashboard();
             break;
         case "Topo":
-            "PrintTopoPage() -----> en caso de que lo haya";
+            PrintWackatopoPage();
             break;
         case "Login":
             Login();

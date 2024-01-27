@@ -29,7 +29,7 @@ const template = () => `
             src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761735/6168776_kfna36.png"
             alt="go to memory game"
           />
-          <h2>MEMORY GAME</h2>
+          <h2>AHORCADO</h2>
         </figure>
       </li>
     </ul>
@@ -44,7 +44,14 @@ const addEventListeners = () => {
   navigatePokemon.addEventListener("click", () => {
     initControler("Pokemon");
   });
+
+  const navigateMole = document.getElementById("navigateMole");
+  navigatePokemon.addEventListener("click", () => {
+    initControler("Wackatopo");
+  });
+
 };
+
 
 export const printTemplateDashboard = () => {
   /** Como siempre las paginas se renderizan en el main por lo cual inyectamos el template en el contenedor del main */
