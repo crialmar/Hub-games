@@ -8,7 +8,7 @@ const template = () => `
       <li>
         <figure id="navigatePokemon">
           <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761508/pngwing.com_r0hr9b.png"
+            src="https://res.cloudinary.com/dm8swv5zy/image/upload/f_auto,q_auto/o5i0n0e9unoo7ajstf9s.png"
             alt="go to page pokemon"
           />
           <h2>POKEMON</h2>
@@ -17,16 +17,16 @@ const template = () => `
       <li>
         <figure>
           <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761641/pngwing.com_1_iq8zfk.png"
+            src="https://res.cloudinary.com/dm8swv5zy/image/upload/f_auto,q_auto/mj4qtunzbu4ncxdr9caa.png"
             alt=" go to wacka topo game"
           />
           <h2>WACKA TOPO</h2>
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id="ahorcadoClave">
           <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761735/6168776_kfna36.png"
+            src="https://res.cloudinary.com/dm8swv5zy/image/upload/f_auto,q_auto/axwbunywlddavjpomcsx.png"
             alt="go to memory game"
           />
           <h2>AHORCADO</h2>
@@ -45,9 +45,9 @@ const addEventListeners = () => {
     initControler("Pokemon");
   });
 
-  const navigateMole = document.getElementById("navigateMole");
+  const ahorcadoClave = document.getElementById("ahorcadoClave");
   navigatePokemon.addEventListener("click", () => {
-    initControler("Wackatopo");
+    initControler("ahorcadoClave");
   });
 
 };

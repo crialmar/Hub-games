@@ -1,35 +1,39 @@
-import { getUser } from "../../global/state/globalstate";
+import { getUser } from "../../global/state/globalState";
 import { changeColorRGB } from "../../utils";
 import { initControler } from "../../utils/route";
 import "./Header.css";
 
+//!-------------------------------------------------------------------
+//? ------------------1) TEMPLATE ------------------------------------
+//!-------------------------------------------------------------------
+
 const template = () => `
   <img
-    src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679162/header_giqdug.jpg"
+    src="https://res.cloudinary.com/dm8swv5zy/image/upload/v1706372590/ywahusm8itecadx77e0b.png"
     alt="title hub game website (app)"
     class="logo"
   />
   <nav>
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682684561/changeColor_tat29q.png"
+      src="https://res.cloudinary.com/dm8swv5zy/image/upload/f_auto,q_auto/dsfc8uri7s1j0wda66lh.png"
       alt=" change to style mode page"
       id="changeColor"
     />
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682685633/home_nekvs0.png"
+      src="https://res.cloudinary.com/dm8swv5zy/image/upload/f_auto,q_auto/yraz1iupb10tq4x0a2iz.png"
       alt=" navigate to home app"
       id="buttonDashboard"
     />
     <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679055/logout_arz0gw.png"
+      src="https://res.cloudinary.com/dm8swv5zy/image/upload/f_auto,q_auto/qtegu4xr8v0yhiwkuzsv.png"
       alt="logout"
       id="buttonLogout"
     />
   </nav>
 `;
-
-//? ------- Añadir los eventos con sus escuchadores ---------------
-
+//!-----------------------------------------------------------------------------------
+//? ----------------------- 2 ) Añadir los eventos con sus escuchadores---------------
+//!-----------------------------------------------------------------------------------
 const addListeners = () => {
   /** Para cada elemento grafico que son los botones que hacen acciones con el usuario
    * le meteremos su escuchador
@@ -79,8 +83,6 @@ const addListeners = () => {
     initControler("Login");
   });
 };
-
-
 //!-----------------------------------------------------------------------------------
 //? ------------------------------ 3) La funcion que se exporta y que pinta-----------
 //!-----------------------------------------------------------------------------------

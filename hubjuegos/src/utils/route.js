@@ -1,6 +1,6 @@
 import { getUser } from "../global/state/globalstate";
 import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
-/// estas paginas se haran en el punto 6 ------> Login, PrintPokemonPage, printTemplateDashboard
+/// estas paginas se haran en el punto 6 ------> Login, PrintPokemonPage, printTemplateDashboard, PrintAhorcadoPage
 
 
 
@@ -26,8 +26,8 @@ export const initControler = (pagesRender) => {
         case "Login":
             Login();
             break;
-        case "Memory":
-            "PrintMemoryPage() ------> en caso de que lo haya";
+        case "Ahorcado":
+            PrintAhorcadoPage();
             break;
     }
 };

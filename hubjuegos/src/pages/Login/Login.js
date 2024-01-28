@@ -7,7 +7,7 @@ const template = () => `
   <div id="containerLogin">
     <h1 id="titleLogin">LOGIN</h1>
     <input type="text" name="username" id="username" />
-    <button id="buttonLogin">enviar</button>
+    <button id="buttonLogin">ENVIAR</button>
   </div>
 `;
 

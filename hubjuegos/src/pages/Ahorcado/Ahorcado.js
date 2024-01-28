@@ -1,3 +1,7 @@
+/**import { PrintTemplateKeyboard } from "../../components";
+import { wordList } from "../../utils";
+import "./Ahorcado.css";*/
+
 const template = () => `
     <div id="ahorcado">
         <div id="keyboard"></div>
@@ -7,14 +11,21 @@ const template = () => `
             placeholder="Adivina la palabra"
         />
         <div id="wordList"></div>
+        <div class="content">
+            <img src="#"alt="gif">
+            <h4>Game Over!</h4>
+            <p>The correct word was:<b>rainbow</b></p>
+            <buttonclass="play-again">Play Again</button>
+            </div>
     </div>
 `
+
 const wordDisplay = document.querySelector(".word-display");
 const guessesText = document.querySelector(".guesses-text b");
 const keyboardDiv = document.querySelector(".keyboard");
 const hangmanImage = document.querySelector(".hangman-box img");
 const gameModal = document.querySelector(".game-modal");
-const playAgainBtn = gameModal.querySelector("button");
+//const playAgainBtn = gameModal.querySelector("button");
 
 //*------------------> Inicialización de las variables
 
@@ -32,6 +43,7 @@ const resetGame = () => {    //*--------------------------> Reseteo de las varia
     gameModal.classList.remove("show");
 }
 
+
 const getRandomWord = () => {  //* -----------> Usando la wordlist, elige una palabra y pista de forma aleatoria
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     currentWord = word;     //* -------------> Ahora currentWord es la palabra creada de forma aleatoria
@@ -45,29 +57,12 @@ const gameOver = (isVictory) => {     //* -----------> Modals que al final de pa
     gameModal.querySelector("p").innerHTML = `${modalText}<b>${currentWord}</b>`;
     gameModal.classList.add("show");
 }
-const initGame = (button, clickedLetter) => { //*------> Vamos a comprobar que clickedLetter esté en currentWord
-    if (currentWord.includes(clickedLetter)) {
-        [...currentWord].forEach((letter, index) => {
-            if (letter === clickedLetter) {
-                correctLetters.push(letter);
-                wordDisplay.querySelectorAll("li")[index].innerText = letter;
-                wordDisplay.querySelectorAll("li")[index].classList.add("guessed"); //* --------> da un diseño concreto de css
-            }
-        });
-
-    } else { //* ---------> Si la palabra no existe entonces se actualiza wrongGuessCount y la imagen del ahorcado
-        wrongGuessCount++;
-        hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
-    }
-
-    button.disabled = true; //* --------> se deshabilita la letra
-    guessesText.innerText = `${wrongGuessCount}/${maxGuesses}`; //* --------> muestra la cantidad de intentos fallidos y el máximo de intentos permitidos
-
-    //*---------> Llamamos a gameOver si se dan alguna de las siguientes condiciones
-    if (wrongGuessCount === maxGuesses) returngameOver(false);
-    if (correctLetters.length === currentWord.length) return gameOver(true);
-}
 
 getRandomWord();
 
-playAgainBtn.addEventListener("click", getRandomWord);
+const botonAgain = playAgainBtn.addEventListener("click", getRandomWord);
+
+/*export const PrintAhorcadoPage = () => {
+    document.getElementById("main").innerHTML = template();
+    PrintTemplateKeyboard()
+}*/
