@@ -1,46 +1,46 @@
 export const wordList = [
     {
         word: "guitarra",
-        hint: "A musical instrument with strings."
+        hint: "Instrumento musical con cuerdas. Paco de Lucía lo usaba."
     },
     {
         word:
-            "oxygen"
+            "oxigeno"
         ,
         hint:
-            "A colorless, odorless gas essential for life."
+            "Elemento químico de número atómico 8."
     }
     ,
     {
         word:
-            "mountain"
+            "javascript"
         ,
         hint:
-            "A large natural elevation of the Earth's surface."
+            "Lenguaje de programación que estamos usando en este proyecto."
     }
     ,
     {
         word:
-            "painting"
+            "hubgame"
         ,
         hint:
-            "An art form using colors on a surface to create images or expression."
+            "Este proyecto."
     }
     ,
     {
         word:
-            "astronomy"
+            "pikachu"
         ,
         hint:
-            "The scientific study of celestial objects and phenomena."
+            "Pokemon más icónico."
     }
     ,
     {
         word:
-            "football"
+            "mamma mia"
         ,
         hint:
-            "A popular sport played with a spherical ball."
+            "Musical de ABBA."
     }
     ,
     {
@@ -48,23 +48,23 @@ export const wordList = [
             "chocolate"
         ,
         hint:
-            "A sweet treat made from cocoa beans."
+            "Dulce muy rico que se usa para hacer coberturas, entre otras cosas."
     }
     ,
     {
         word:
-            "butterfly"
+            "conejo"
         ,
         hint:
-            "An insect with colorful wings and a slender body."
+            "Animal que hace que Alicia vaya al País de las Maravillas."
     }
     ,
     {
         word:
-            "history"
+            "historia"
         ,
         hint:
-            "The study of past events and human civilization."
+            "Estudio de los eventos pasados de la civilización."
     }
     ,
     {
@@ -72,7 +72,7 @@ export const wordList = [
             "pizza"
         ,
         hint:
-            "A savory dish consisting of a round, flattened base with toppings."
+            "Típico plato italiano que no es pasta."
     }
     ,
     {
@@ -80,22 +80,22 @@ export const wordList = [
             "jazz"
         ,
         hint:
-            "A genre of music characterized by improvisation and syncopation."
+            "Género musical surgido en Nueva Orleans."
     }
     ,
     {
         word:
-            "camera"
+            "netflix"
         ,
         hint:
-            "A device used to capture and record images or videos."
+            "Plataforma de streaming negra y roja."
     }
     ,
     {
         word:
-            "diamond"
+            "eurovision"
         ,
         hint:
-            "A precious gemstone known for its brilliance and hardness."
+            "Festival de música donde compiten países de Europa."
     }
 ]

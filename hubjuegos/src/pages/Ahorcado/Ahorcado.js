@@ -1,7 +1,10 @@
-/**import { PrintTemplateKeyboard } from "../../components";
-import { wordList } from "../../utils";
-import "./Ahorcado.css";*/
+import { PrintTemplateKeyboard } from "../../components";
+import { wordList } from "../../utils/wordList";
+import "./Ahorcado.css";
 
+console.log(wordList);
+
+//? ------------------------------TEMPLATE INICIAL--------------------------------
 const template = () => `
     <div id="ahorcado">
         <div id="keyboard"></div>
@@ -12,20 +15,25 @@ const template = () => `
         />
         <div id="wordList"></div>
         <div class="content">
-            <img src="#"alt="gif">
-            <h4>Game Over!</h4>
-            <p>The correct word was:<b>rainbow</b></p>
-            <buttonclass="play-again">Play Again</button>
+                <img src="#"alt="gif">
+                <h4>Game Over!</h4>
+                <p>The correct word was:<b>rainbow</b></p>
+                <h4 class="hint-text">Hint: <b></b></h4>
+            <button class="play-again">Play Again</button>
             </div>
     </div>
 `
-
-const wordDisplay = document.querySelector(".word-display");
-const guessesText = document.querySelector(".guesses-text b");
-const keyboardDiv = document.querySelector(".keyboard");
-const hangmanImage = document.querySelector(".hangman-box img");
-const gameModal = document.querySelector(".game-modal");
-//const playAgainBtn = gameModal.querySelector("button");
+//? ----------------- FUNCION QUE TRAE LOS DATOS DEL CONTEXTO--------------------
+let playAgainBtn; //*----------------------> te daba typeError: uncaught ReferenceError: playAgainBtn is not defined at Ahorcado.js:65:20
+//*----------------------> por eso ahora está en global scope, para poder utilizarla... tampoco te convence
+const setGame = () => {
+    const wordDisplay = document.querySelector(".word-display");
+    const guessesText = document.querySelector(".guesses-text b");
+    const keyboardDiv = document.querySelector(".keyboard");
+    const hangmanImage = document.querySelector(".hangman-box img");
+    const gameModal = document.querySelector(".game-modal");
+    const playAgainBtn = document.querySelector("button");
+}
 
 //*------------------> Inicialización de las variables
 
@@ -42,12 +50,20 @@ const resetGame = () => {    //*--------------------------> Reseteo de las varia
     keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
     gameModal.classList.remove("show");
 }
-
+/*const botoncito = () => {
+   document.addEventListener('DOMContentLoaded', () => {
+   setGame(); 
+   const botonAgain = playAgainBtn.addEventListener("click", getRandomWord);
+}); 
+}*/
+//*--------------------------> solución dada por ChatGPT. No nos convence
 
 const getRandomWord = () => {  //* -----------> Usando la wordlist, elige una palabra y pista de forma aleatoria
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
-    currentWord = word;     //* -------------> Ahora currentWord es la palabra creada de forma aleatoria
-    document.querySelector(".hint-text b").innerText = hint; resetGame();
+    currentWord = word;
+    console.log(document.querySelector(".hint-text"))  //* -------------> Ahora currentWord es la palabra creada de forma aleatoria
+    document.querySelector(".hint-text").textContent = hint;
+    resetGame();
 }
 
 const gameOver = (isVictory) => {     //* -----------> Modals que al final de partida enseñan un mensaje de victoria o no
@@ -57,12 +73,13 @@ const gameOver = (isVictory) => {     //* -----------> Modals que al final de pa
     gameModal.querySelector("p").innerHTML = `${modalText}<b>${currentWord}</b>`;
     gameModal.classList.add("show");
 }
+//getRandomWord();
+//const botonAgain = playAgainBtn.addEventListener("click", getRandomWord);
 
-getRandomWord();
+//document.addEventListener('DOMContentLoaded', setGame);
 
-const botonAgain = playAgainBtn.addEventListener("click", getRandomWord);
-
-/*export const PrintAhorcadoPage = () => {
-    document.getElementById("main").innerHTML = template();
-    PrintTemplateKeyboard()
-}*/
+//? ---------------------FUNCION QUE SE EXPORTA QUE PINTA LA PAGINA--------------
+export const PrintAhorcadoPage = () => {
+    document.querySelector("main").innerHTML = template();
+    setGame()
+}

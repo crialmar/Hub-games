@@ -1,41 +1,42 @@
-body {
+#bodyMole {
+
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: bisque;
+    background: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460888/mario-bg_zdinps.jpg");
     background-size: cover;
-}
-
-#board {
-    width: 540px;
-    height: 540px;
-    /* background-color: green; */
-
+    width: 2140px;
+    height: 900px;
+  }
+  
+  #board {
+    width: 555px;
+    height: 555px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
-    background-color: brown;
+    background: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460856/soil_ioqoro.png");
     background-size: cover;
+    border-radius: 25px; 
     border: 3px solid white;
-    border-radius: 25px;
-}
-
-#board div {
-    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
-    width: 180px; 
+  
+  }
+  
+  #board div {
+    /* board = 540x540, divide into 3x3 tiles*/
+    width: 180px;
     height: 180px;
-    background-image: url("https://res.cloudinary.com/dm8swv5zy/image/upload/f_auto,q_auto/p2xt2bpollsojopdsh0a.png");
+    background-image: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460856/pipe_n6vmsf.png");
     background-size: cover;
-}
-
-#board div img {
-    /* all img tags inside tiles */
+  
+  }
+  
+  #board div img {
     width: 100px;
     height: 100px;
-
-    user-select: none;    /* esto es para que no se pueda seleccionar las imgs*/
+  
+    user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-}
+  }

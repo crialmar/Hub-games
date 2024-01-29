@@ -1,4 +1,4 @@
-import { getUser } from "../../global/state/globalState";
+import { getUser } from "../../global/state/globalstate";
 import { changeColorRGB } from "../../utils";
 import { initControler } from "../../utils/route";
 import "./Header.css";

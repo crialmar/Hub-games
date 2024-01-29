@@ -1,10 +1,10 @@
 
-//import "./Keyboard.css";
+import "./Keyboard.css";
 
 for (let i = 97; i <= 122; i++) { //*---------------> para hacer el abecedario
     const button = document.createElement("button");
     button.innerText = String.fromCharCode(i);
-    keyboardDiv.appendChild(button);
+    // keyboardDiv.appendChild(button);
     button.addEventListener("click", (e) => initGame(e.target, String.fromCharCode(i)));
 }
 
@@ -31,5 +31,5 @@ const initGame = (button, clickedLetter) => { //*------> Vamos a comprobar que c
     if (correctLetters.length === currentWord.length) return gameOver(true);
 }
 
-/*export const PrintTemplateKeyboard = () =>
-    (document.getElementById("Keyboard").innerHTML = template());*/
+export const PrintTemplateKeyboard = () =>
+    (document.getElementById("keyboard").innerHTML = template());

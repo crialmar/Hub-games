@@ -1,6 +1,12 @@
 import { getUser } from "../global/state/globalstate";
-import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
-/// estas paginas se haran en el punto 6 ------> Login, PrintPokemonPage, printTemplateDashboard, PrintAhorcadoPage
+import {
+    Login,
+    PrintPokemonPage,
+    printTemplateDashboard,
+    PrintWackatopoPage,
+    PrintAhorcadoPage
+} from "../pages";
+/// estas paginas se haran en el punto 6 ------> Login, PrintPokemonPage, printTemplateDashboard
 
 
 
@@ -26,7 +32,7 @@ export const initControler = (pagesRender) => {
         case "Login":
             Login();
             break;
-        case "Ahorcado":
+        case "ahorcadoClave":
             PrintAhorcadoPage();
             break;
     }
