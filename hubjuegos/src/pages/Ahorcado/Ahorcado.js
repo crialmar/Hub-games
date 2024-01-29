@@ -25,15 +25,14 @@ const template = () => `
 `
 //? ----------------- FUNCION QUE TRAE LOS DATOS DEL CONTEXTO--------------------
 let playAgainBtn; //*----------------------> te daba typeError: uncaught ReferenceError: playAgainBtn is not defined at Ahorcado.js:65:20
-//*----------------------> por eso ahora está en global scope, para poder utilizarla... tampoco te convence
-const setGame = () => {
-    const wordDisplay = document.querySelector(".word-display");
-    const guessesText = document.querySelector(".guesses-text b");
-    const keyboardDiv = document.querySelector(".keyboard");
-    const hangmanImage = document.querySelector(".hangman-box img");
-    const gameModal = document.querySelector(".game-modal");
-    const playAgainBtn = document.querySelector("button");
-}
+//*----------------------> por eso ahora está en global scope, para poder utilizarla... tampoco te convenc
+const wordDisplay = document.querySelector(".word-display");
+const guessesText = document.querySelector(".guesses-text b");
+const keyboardDiv = document.querySelector(".keyboard");
+const hangmanImage = document.querySelector(".hangman-box img");
+const gameModal = document.querySelector(".game-modal");
+//const playAgainBtn = document.querySelector("button");
+
 
 //*------------------> Inicialización de las variables
 
