@@ -27,7 +27,7 @@ const setGame = () => {
     for (let i = 0; i < 9; i++) { // de esta forma te ahorras escribir <div id="0-8"></div> en un html
         let tile = document.createElement("div");
         tile.id = i.toString();
-        tile.addEventListener("click", selectTile);
+        tile.addEventListener("click", () => selectTile(tile));
         document.getElementById("board").appendChild(tile);
     }
     const idIntervalMole = setInterval(setMole, 1000);
@@ -76,8 +76,20 @@ const setBomb = () => {
     currBombTile.appendChild(bomb);
 }
 
-//const selectTile = () => {
-function selectTile() {
+const selectTile = (tile) => {
+    console.log(tile); //* -------> recuerda que esto solo es de control
+    if (gameOver) {
+        return;
+    } else if (tile == currMoleTile) {
+        console.log("current topito", currMoleTile)
+        score += 10;
+        document.querySelector("#score").innerText = score.toString(); //* ----------> actualiza la puntuación en html
+    } else if (tile == currBombTile) {
+        document.querySelector("#score").innerText = "GAME OVER: " + score.toString(); //* ----------> da el game over
+        gameOver = true;
+    }
+}
+/*function selectTile() {
     if (gameOver) {
         return;
     } else if (this == currMoleTile) {
@@ -87,12 +99,14 @@ function selectTile() {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //* ----------> da el game over
         gameOver = true;
     }
-}
+}*/
 
 /**poner aqui el clear*/
 const stopInterval = () => {
     clearInterval(setGame);
 }
+
+
 
 //? ---------------------FUNCION QUE SE EXPORTA QUE PINTA LA PAGINA--------------
 export const PrintWackatopoPage = () => {

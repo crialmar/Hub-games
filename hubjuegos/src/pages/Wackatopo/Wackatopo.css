@@ -1,32 +1,67 @@
 
+h1 {
+  /*font-family: "Allerta Stencil", Sans-serif;*/
+  color: #201e23;
+  word-spacing: normal;
+}
+
+h2 {
+  color: #1c1a20;
+  word-spacing: normal;
+}
+
+#bodyWackatopo {
+  display: inline
+}
+  
+#board {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460856/soil_ioqoro.png");
+  background-size: cover;
+  border-radius: 25px; 
+  border: 3px solid white;
+}
+
+#board div {
+  /* board = 540x540, divide into 3x3 tiles*/
+  width: 145px;
+  height: 145px;
+  background-image: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460856/pipe_n6vmsf.png");
+  background-size: cover;
+
+}
+
+#board div img {
+  width: 100px;
+  height: 100px;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/*@media (max-width: 300px) {
   #board {
-    width: 450px;
-    height: 450px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    background: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460856/soil_ioqoro.png");
-    background-size: cover;
-    border-radius: 25px; 
-    border: 3px solid white;
+    width: 250px;
+    height: 250px;
   }
-  
+
   #board div {
-    /* board = 540x540, divide into 3x3 tiles*/
-    width: 145px;
-    height: 145px;
-    background-image: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460856/pipe_n6vmsf.png");
-    background-size: cover;
-  
+    width: 30%;
+    padding-bottom: 30%;
   }
   
   #board div img {
-    width: 100px;
-    height: 100px;
-  
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    width: 60%;
+    height: 60%;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 20% auto; 
   }
+}*/

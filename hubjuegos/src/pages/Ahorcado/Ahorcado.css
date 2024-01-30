@@ -1,16 +1,30 @@
+
 #palabra_a_adivinar{
     height: 3em;
-}
-#palabra_a_adivinar span{ 
-    vertical-align: bottom;
-    font-size: 2em;
-    border-bottom: 2px solid black;
-    width: 30px;
-    text-align: center;
-    margin-right: 6px;
-    display: inline-block; 
-}
+    }
+    #palabra_a_adivinar span{ 
+        vertical-align: bottom;
+        font-size: 2em;
+        border-bottom: 2px solid black;
+        width: 30px;
+        text-align: center;
+        margin-right: 6px;
+        display: inline-block; 
+    }
 
-image{
-    width: 400px;
-}
+    .image{
+        width: 400px;
+    }
+
+
+/*@media (min-width: 320px) and (max-width: 479px) {
+
+    .image{
+        display: flex;
+        align-items: center
+        
+    }
+    .game-image img {
+        width: 100%;
+    }
+}*/
