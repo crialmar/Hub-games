@@ -11,7 +11,8 @@ h2 {
 }
 
 #bodyWackatopo {
-  display: inline
+  display: flex;
+  flex-direction:column;
 }
   
 #board {
