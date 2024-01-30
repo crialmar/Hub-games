@@ -1,17 +1,12 @@
-.game-box.keyboard{
+
+#letras{ 
+    margin-top: 30px;
     display: flex;
-    gap:5px;
     flex-wrap: wrap;
-    margin-top:40px;
-    justify-content: center;
 }
 
-.keyboard button{
-    padding:7px;
-    width: calc(100%/9-5px);
-}
-
-.keyboard button[disabled]{
-    pointer-events: none;
-    opacity:0.6;
+#letras button{ 
+    width: 28px;
+    padding: 6px 0;
+    text-align: center;
 }

@@ -28,21 +28,21 @@
   }
   
   .grass {
-    background-color: #63bb5b75;
+    background-color: #63bb5b26;
   }
   figure.grass {
-    border: 10px solid #63bb5b;
+    border: 10px solid #298620;
   }
   
   figure.bug {
-    border: 10px solid #8fc12c;
+    border: 10px solid #8fc12c70;
   }
   .bug {
     background-color: #8fc12c80;
   }
   
   figure.dark {
-    border: 10px solid #5a5366;
+    border: 10px solid #5a53664d;
   }
   .dark {
     background-color: #5a536687;
@@ -51,7 +51,7 @@
     border: 10px solid #0a6dc4;
   }
   .dragon {
-    background-color: #0a6dc482;
+    background-color: #5889b4cc;
   }
   figure.electric {
     border: 10px solid #f3d13b;
@@ -64,7 +64,7 @@
     border: 10px solid #ec8fe6;
   }
   .fairy {
-    background-color: #ec8fe67e;
+    background-color: #e7a6e37e;
   }
   figure.fighting {
     border: 10px solid #ce4068;
@@ -74,10 +74,10 @@
   }
   
   figure.fire {
-    border: 10px solid #ff9b54;
+    border: 10px solid #f3ac79;
   }
   .fire {
-    background-color: #ff9b546f;
+    background-color: #f8893a6f;
   }
   
   figure.flying {
@@ -106,10 +106,10 @@
     background-color: #74cec17e;
   }
   figure.normal {
-    border: 10px solid #9099a1;
+    border: 10px solid #967d999a;
   }
   .normal {
-    background-color: #9099a17b;
+    background-color: #a3789d7b;
   }
   
   figure.poison {
@@ -126,7 +126,7 @@
     background-color: #f971767e;
   }
   figure.rock {
-    border: 10px solid #c7b78b;
+    border: 10px solid #c7b78bb9;
   }
   .rock {
     background-color: #c7b78b78;

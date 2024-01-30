@@ -19,7 +19,7 @@ let currBombTile;
 let score = 0;
 let gameOver = false;
 //*----------------------------------------> ESTO DENTRO DE AQUI
-/*window.onload = () => {
+/*const carga = window.onload = () => {
     setGame();
 }*/
 
@@ -30,7 +30,7 @@ const setGame = () => {
         tile.addEventListener("click", selectTile);
         document.getElementById("board").appendChild(tile);
     }
-    const idIntervalMole = setInterval(setMole, 7000);
+    const idIntervalMole = setInterval(setMole, 1000);
     setIdMoleOne(idIntervalMole)
     const idIntervalBomb = setInterval(setBomb, 2000);/**HAY QUE LIMPIARLO CON CLEAR INTERVAL*/
     setIdMoleTwo(idIntervalBomb)
@@ -76,14 +76,15 @@ const setBomb = () => {
     currBombTile.appendChild(bomb);
 }
 
-const selectTile = () => {
+//const selectTile = () => {
+function selectTile() {
     if (gameOver) {
         return;
     } else if (this == currMoleTile) {
         score += 10;
         document.getElementById("score").innerText = score.toString(); //* ----------> actualiza la puntuación en html
     } else if (this == currBombTile) {
-        document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //* ----------> actualiza la puntuación en html
+        document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //* ----------> da el game over
         gameOver = true;
     }
 }

@@ -4,7 +4,12 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   
-
+/* Evitar scroll horizontal
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    } */
+    
   & main {
     padding-top: 20vh;
     min-height: 90vh;
@@ -16,7 +21,7 @@
 
   & #app {
     min-height: 100vh;
-    width: 200vw;
+    width: 100vw;
   }
   & body {
     transition: ease-in-out 0.2s;

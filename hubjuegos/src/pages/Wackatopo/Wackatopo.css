@@ -1,16 +1,7 @@
-#bodyMole {
 
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    background: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460888/mario-bg_zdinps.jpg");
-    background-size: cover;
-    width: 2140px;
-    height: 900px;
-  }
-  
   #board {
-    width: 555px;
-    height: 555px;
+    width: 450px;
+    height: 450px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -18,13 +9,12 @@
     background-size: cover;
     border-radius: 25px; 
     border: 3px solid white;
-  
   }
   
   #board div {
     /* board = 540x540, divide into 3x3 tiles*/
-    width: 180px;
-    height: 180px;
+    width: 145px;
+    height: 145px;
     background-image: url("https://res.cloudinary.com/dwfemumfv/image/upload/v1706460856/pipe_n6vmsf.png");
     background-size: cover;
   
