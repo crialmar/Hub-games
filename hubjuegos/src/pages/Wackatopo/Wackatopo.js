@@ -107,6 +107,13 @@ const stopInterval = () => {
 }
 
 
+const buttonReset = document.createElement("button")
+buttonReset.addEventListener("click", () => {
+    setGame()
+});
+
+
+
 
 //? ---------------------FUNCION QUE SE EXPORTA QUE PINTA LA PAGINA--------------
 export const PrintWackatopoPage = () => {
