@@ -20,7 +20,7 @@ export const obtener_random = (num_min, num_max) => {
 
 export const iniciar = (event) => {
     const imagen = id("imagen");
-    imagen.src = "public/img/img0.png";
+    imagen.src = "./img/img0.png";
     const btn = id("jugar");
     btn.disabled = true;
     setErrores(0);
@@ -69,7 +69,7 @@ export const click_letras = (event) => {
         console.log(errores);
         setErrores(errores + 1);
         console.log("errores", getInfoAhorcado().cant_errores);
-        const source = `/img/img${getInfoAhorcado().cant_errores}.png`;
+        const source = `./img/img${getInfoAhorcado().cant_errores}.png`;
         const imagen = document.getElementById("imagen");
         imagen.src = source;
     }
