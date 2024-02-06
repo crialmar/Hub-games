@@ -1,33 +1,89 @@
+h1 {
+    margin: 0;
+    color: white;
+}
 
-#palabra_a_adivinar{
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#imagen {
+    width: 80%; 
+    max-width: 200px; 
+}
+
+#jugar {
+    width: 100%;
+    max-width: 150px; 
+    padding: 7px 20px;
+    border-radius: 50px;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: rgb(137, 234, 160);
+    box-shadow: 0px 5px 0px 0px rgb(148, 251, 181);
+    -webkit-box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.61);
+      -moz-box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.61);
+      box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.61);
+  
+      transition: ease-in-out 0.1s;
+      &:hover {
+        -webkit-box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.61);
+        -moz-box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.61);
+        box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.61);
+  
+        transform: scale(0.98);
+      }
+}
+
+#resultado {
+    margin-top: 10px;
+}
+
+#palabra_a_adivinar {
     height: 3em;
-    }
-    #palabra_a_adivinar span{ 
+}
+
+#palabra_a_adivinar span {
+    vertical-align: bottom;
+    font-size: 1.5em;
+    border-bottom: 2px solid black;
+    width: 10px;
+    text-align: center;
+    margin-right: 5px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    #palabra_a_adivinar span {
         vertical-align: bottom;
-        font-size: 2em;
+        font-size: 1.5em;
         border-bottom: 2px solid black;
-        width: 30px;
+        width: 10px;
         text-align: center;
-        margin-right: 6px;
-        display: inline-block; 
+        margin-right: 5px;
+        margin-top: 5px;
+        display: inline-block;
     }
 
-    .image{
-        width: 400px;
+    #imagen{
+        padding-top: 5px;
     }
-
-    #image{
-        width: 200px;
-    }
-
-/*@media (min-width: 320px) and (max-width: 479px) {
-
-    .image{
-        display: flex;
-        align-items: center
-        
-    }
-    .game-image img {
-        width: 100%;
-    }
-}*/
+}

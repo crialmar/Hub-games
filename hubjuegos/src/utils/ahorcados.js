@@ -19,9 +19,11 @@ export const obtener_random = (num_min, num_max) => {
 };
 
 export const iniciar = (event) => {
+    //const resultado = id("resultado")
     const imagen = id("imagen");
     imagen.src = "./img/img0.png";
     const btn = id("jugar");
+
     btn.disabled = true;
     setErrores(0);
     setAciertos(0);
